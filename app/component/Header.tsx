@@ -7,9 +7,11 @@ import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { MouseEvent, useState } from "react";
 
 const Header = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -17,6 +19,9 @@ const Header = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleLogout = () => {
+    router.push("/");
   };
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -29,7 +34,7 @@ const Header = () => {
       >
         <Toolbar style={{ "justify-content": "space-between" }}>
           <div>
-            <Link href="/">
+            <Link href="/home">
               <Image
                 src="/images/KindImpact-logo-slogan.png"
                 alt="KindImpact-logo"
@@ -60,7 +65,7 @@ const Header = () => {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem>
+                <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
               <AccountCircleIcon sx={{ fontSize: 80 }} color="primary" />
             </div>

@@ -20,7 +20,7 @@ const ListingCard = ({ id, image, name, description }: IEventDetails) => {
         <h2>{description}</h2>
         <Button
           variant="contained"
-          href={`/event/${id}`}
+          href={`/home/event/${id}`}
           sx={{
             mt: 3,
           }}

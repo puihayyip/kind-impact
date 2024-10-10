@@ -42,7 +42,7 @@ const EventDetailsPage = ({ params }: { params: { id: string } }) => {
       });
     }, 475);
     setTimeout(() => {
-      router.push("/");
+      router.push("/home");
     }, 5000);
   };
 

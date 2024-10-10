@@ -82,7 +82,15 @@ function ChildModal({
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 800, borderRadius: "30px" }}>
+        <Box
+          sx={{
+            ...style,
+            width: 800,
+            borderRadius: "30px",
+            maxHeight: 11 / 12,
+            overflowY: "scroll",
+          }}
+        >
           <p className="text-2xl font-bold mb-4" id="child-modal-title">
             {chat.name}
           </p>

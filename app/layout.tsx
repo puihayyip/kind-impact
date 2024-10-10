@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ThemeRegistry from "./component/ThemeRegistry";
 import "./globals.css";
-import Header from "./component/Header";
 
 export const metadata: Metadata = {
   title: "KindImpact Next App",
@@ -17,7 +16,6 @@ export default function RootLayout({
     <html lang="en">
       <ThemeRegistry>
         <body>
-          <Header />
           <main className="mx-auto max-w-9xl px-4 py-6 sm:px-6 lg:px-8">
             {children}
           </main>
