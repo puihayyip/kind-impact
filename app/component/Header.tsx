@@ -70,17 +70,17 @@ const Header = () => {
               <AccountCircleIcon sx={{ fontSize: 80 }} color="primary" />
             </div>
             <div className="flex gap-x-3">
-              <Link href="/about-us">
+              <Link href="/home/about-us">
                 <h1 className="font-bold text-2xl ml-3 text-blue-700">
                   About Us
                 </h1>
               </Link>
-              <Link href="/contact-us">
+              <Link href="/home/contact-us">
                 <h1 className="font-bold text-2xl ml-3  text-blue-700">
                   Contact Us
                 </h1>
               </Link>
-              <Link href="/careers">
+              <Link href="/home/careers">
                 <h1 className="mr-6 font-bold text-2xl ml-3  text-blue-700">
                   Careers
                 </h1>
